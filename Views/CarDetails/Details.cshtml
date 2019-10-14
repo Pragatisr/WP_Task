@@ -1,0 +1,67 @@
+﻿@model CarRental_WP.Models.CarsModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+               Vehicle No
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VehicleNo)
+            </dd>
+
+            <dt>
+                Car Model
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Model)
+            </dd>
+
+            <dt>
+                Seating Capacity
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SeatingCap)
+            </dd>
+
+            <dt>
+                Rent Per Day
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RentPerDay)
+            </dd>
+
+            <dt>
+                Booked Status
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BkdStatus)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
